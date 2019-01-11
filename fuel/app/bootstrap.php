@@ -16,6 +16,8 @@ require COREPATH.'bootstrap.php';
 \Autoloader::add_classes(array(
 	// Add classes you want to override here
 	// Example: 'View' => APPPATH.'classes/view.php',
+	
+		
 ));
 
 // Register the autoloader
@@ -33,3 +35,13 @@ require COREPATH.'bootstrap.php';
 
 // Initialize the framework with the config file.
 \Fuel::init('config.php');
+
+
+
+
+// 名前空間を追加する。オートローダがクラスを見つけられるようにするために必要
+Autoloader::add_namespace('PHPCrawl_083', __DIR__.'/fuel/packages/PHPCrawl_083');
+
+Autoloader::add_classes(array(
+		'PHPCrawl_083\\MyCrawler' => __DIR__.'/fuel/packages/PHPCrawl_083/example.php',
+));

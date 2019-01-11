@@ -6,5 +6,14 @@
  */
 
 return array(
-
+   'default' => array(
+      'connection'  => array(
+         'hostname' => 'localhost',
+         'port'     => '3306',
+         'database' => 'craw_php',
+         'username' => 'root',
+         'password' => 'root',
+      ),
+        'profiling' => true,
+   ),
 );
